@@ -24,7 +24,10 @@
         "en-US",
         "pt-BR"
       ],
-      "tools": [],
+      "tools": [
+        "prettier",
+        "hads"
+      ],
       "utility": [
         "lodash",
         "moment"

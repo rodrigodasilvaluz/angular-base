@@ -16,26 +16,25 @@ describe('ShellComponent', () => {
   let component: ShellComponent;
   let fixture: ComponentFixture<ShellComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        TranslateModule.forRoot(),
-        I18nModule,
-        BrowserAnimationsModule,
-        FlexLayoutModule,
-        MaterialModule,
-        RouterTestingModule
-      ],
-      providers: [
-        { provide: AuthenticationService, useClass: MockAuthenticationService },
-        { provide: CredentialsService, useClass: MockCredentialsService }
-      ],
-      declarations: [
-        ShellComponent
-      ]
-  })
-    .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          TranslateModule.forRoot(),
+          I18nModule,
+          BrowserAnimationsModule,
+          FlexLayoutModule,
+          MaterialModule,
+          RouterTestingModule,
+        ],
+        providers: [
+          { provide: AuthenticationService, useClass: MockAuthenticationService },
+          { provide: CredentialsService, useClass: MockCredentialsService },
+        ],
+        declarations: [ShellComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ShellComponent);

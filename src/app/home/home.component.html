@@ -1,14 +1,36 @@
 <div class="container">
   <mat-card>
     <p>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
     </p>
     <mat-card-content>
       <mat-card-title translate>Hello world !</mat-card-title>
       <mat-card-subtitle>
         <app-loader [isLoading]="isLoading" [size]="1.5"></app-loader>
-        <q [hidden]="isLoading">{{quote}}</q>
+        <q [hidden]="isLoading">{{ quote }}</q>
       </mat-card-subtitle>
     </mat-card-content>
+
+    <!--The content below is only a placeholder and can be replaced.-->
+    <div style="text-align: center;">
+      <input
+        id="firstName"
+        [(ngModel)]="inputs.firstName"
+        class="input"
+        placeholder="First Name"
+        (focus)="onFocus($event)"
+        (change)="onChange($event)"
+      />
+      <input
+        id="lastName"
+        [(ngModel)]="inputs.lastName"
+        class="input"
+        placeholder="Last Name"
+        (focus)="onFocus($event)"
+        (change)="onChange($event)"
+      />
+      <app-simple-keyboard [inputs]="inputs" [inputFocus]="inputFocus" [inputChange]="inputChange" [inputName]="'firstName'"></app-simple-keyboard>
+    </div>
+
   </mat-card>
 </div>

@@ -5,19 +5,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '@app/material.module';
 import { LoaderComponent } from './loader/loader.component';
+import { SimpleKeyboardComponent } from './simple-keyboard/simple-keyboard.component';
 
 @NgModule({
-  imports: [
-    FlexLayoutModule,
-    MaterialModule,
-    TranslateModule,
-    CommonModule
-  ],
+  imports: [FlexLayoutModule, MaterialModule, TranslateModule, CommonModule],
   declarations: [
-    LoaderComponent
+    LoaderComponent,
+    SimpleKeyboardComponent,
   ],
   exports: [
-    LoaderComponent
-  ]
+    LoaderComponent,
+    SimpleKeyboardComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
